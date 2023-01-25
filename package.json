@@ -11,9 +11,13 @@
     "perf-test": "reassure",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "yarn --force",
-    "typescript": "tsc --noEmit"
+    "typescript": "tsc --noEmit",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "danger": "^11.2.2",
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.2.0",
     "react-native": "0.70.6"
   },

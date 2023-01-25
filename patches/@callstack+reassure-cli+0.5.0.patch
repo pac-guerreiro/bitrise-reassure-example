@@ -1,0 +1,33 @@
+diff --git a/node_modules/@callstack/reassure-cli/lib/commonjs/commands/check-stability.js b/node_modules/@callstack/reassure-cli/lib/commonjs/commands/check-stability.js
+index c5cc6c4..804366d 100644
+--- a/node_modules/@callstack/reassure-cli/lib/commonjs/commands/check-stability.js
++++ b/node_modules/@callstack/reassure-cli/lib/commonjs/commands/check-stability.js
+@@ -9,10 +9,10 @@ exports.run = run;
+ var _measure = require("./measure");
+ 
+ async function run() {
+-  (0, _measure.run)({
++  await (0, _measure.run)({
+     baseline: true
+   });
+-  (0, _measure.run)({
++  await (0, _measure.run)({
+     baseline: false,
+     compare: true
+   });
+diff --git a/node_modules/@callstack/reassure-cli/lib/module/commands/check-stability.js b/node_modules/@callstack/reassure-cli/lib/module/commands/check-stability.js
+index c623f85..2424995 100644
+--- a/node_modules/@callstack/reassure-cli/lib/module/commands/check-stability.js
++++ b/node_modules/@callstack/reassure-cli/lib/module/commands/check-stability.js
+@@ -1,9 +1,9 @@
+ import { run as measure } from './measure';
+ export async function run() {
+-  measure({
++  await measure({
+     baseline: true
+   });
+-  measure({
++  await measure({
+     baseline: false,
+     compare: true
+   });
